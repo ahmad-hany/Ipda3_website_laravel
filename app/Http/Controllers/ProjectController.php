@@ -15,7 +15,23 @@ class ProjectController extends Controller
     public function index()
     {
         $project = Project::all()->toArray();
-        return view(['*'], compact('project'));
+
+        if (Request::is('home')) {
+
+            return view('home', compact('project'));
+        } else if (Request::is('article-details')) {
+
+            return view('article-details', compact('project'));
+        } else if (Request::is('our-articles')) {
+
+            return view('our-articles', compact('project'));
+        } else if (Request::is('our-work')) {
+
+            return view('our-work', compact('project'));
+        } else if (Request::is('project-details')) {
+
+            return view('project-details', compact('project'));
+        }
     }
 
     /**

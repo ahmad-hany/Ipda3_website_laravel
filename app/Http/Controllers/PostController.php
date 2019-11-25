@@ -15,7 +15,23 @@ class PostController extends Controller
     public function index()
     {
         $post = Post::all()->toArray();
-        return view(['*'], compact('post'));
+        
+        if (Request::is('home')) {
+
+            return view('home', compact('post'));
+        } else if (Request::is('article-details')) {
+
+            return view('article-details', compact('post'));
+        } else if (Request::is('our-articles')) {
+
+            return view('our-articles', compact('post'));
+        } else if (Request::is('our-work')) {
+
+            return view('our-work', compact('post'));
+        } else if (Request::is('project-details')) {
+
+            return view('project-details', compact('post'));
+        }
     }
 
     /**

@@ -15,7 +15,23 @@ class ServiceController extends Controller
     public function index()
     {
         $service = Service::all()->toArray();
-        return view(['*'], compact('service'));
+
+        if (Request::is('home')) {
+
+            return view('home', compact('service'));
+        } else if (Request::is('article-details')) {
+
+            return view('article-details', compact('service'));
+        } else if (Request::is('our-articles')) {
+
+            return view('our-articles', compact('service'));
+        } else if (Request::is('our-work')) {
+
+            return view('our-work', compact('service'));
+        } else if (Request::is('project-details')) {
+
+            return view('project-details', compact('service'));
+        }
     }
 
     /**

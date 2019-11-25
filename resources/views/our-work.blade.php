@@ -19,12 +19,21 @@
         <div class="container">
             <div class="row pt-5 wow bounceInLeft animated slow">
                 <div class="col-12 col-lg-4">
-                    <div class="card mb-4 shadow">
-                        <img src="{{asset('frontend/assets/imgs/blood-bank.jpg')}}" class="card-img-top" alt="تطبيق بنك الدم">
-                        <div class="card-body">
-                            <h4 class="text-center">تطبيق بنك الدم</h4>
-                        </div>
-                    </div>
+                    
+                     @foreach ($project as $row)
+                                        
+                                    <div class="card mb-4 shadow">
+                                        <img src="{{asset('frontend/assets/imgs/'. $row['cover_image'] .'.jpg')}}" class="card-img-top" alt="تطبيق بنك الدم">
+                                        <div class="card-body">
+                                            <h4 class="text-center">
+                                                <a href="project-details.html" class="text-decoration-none text-body">
+                                                    {{$row['title']}}
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </div>
+
+                                    @endforeach
                 </div>
             </div>
             <div class="row d-flex justify-content-center">

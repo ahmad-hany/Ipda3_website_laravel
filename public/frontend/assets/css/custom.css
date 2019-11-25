@@ -26,11 +26,14 @@ body {
     background-color: #233142;
 }
 
+
 /* section{
     height: 100vh;
 } */
 
+
 /* End General Rules */
+
 
 /* Start Navbar */
 
@@ -42,7 +45,9 @@ body {
     color: #3bade6;
 }
 
+
 /* End Navbar */
+
 
 /* Start Home */
 
@@ -56,6 +61,7 @@ body {
     line-height: 1.5;
 }
 
+
 /* .head_right{
     background-image: url(../imgs/.home.jpg);
     background-repeat: no-repeat;
@@ -63,13 +69,16 @@ body {
     background-position: right;
 } */
 
+
 /* .head_left {
     background-image: url(../imgs/.home-side.jpg);
     background-repeat: no-repeat;
     background-size: 60%;
 } */
 
+
 /* End Home */
+
 
 /* Start About */
 
@@ -86,7 +95,9 @@ body {
     line-height: 1.8;
 }
 
+
 /* End About */
+
 
 /* Start Offer */
 
@@ -107,10 +118,11 @@ body {
 
 .offer .card img {
     width: 60%;
-
 }
 
+
 /* End Offer */
+
 
 /* Start Work */
 
@@ -126,12 +138,15 @@ body {
     border-radius: 30px;
 }
 
+
 /* .work img{
     width: 100%;
     max-height: 250px;
 } */
 
+
 /* End Work */
+
 
 /* Start Articles */
 
@@ -143,7 +158,9 @@ body {
     border-radius: 30px;
 }
 
+
 /* End Articles */
+
 
 /* Start Clients */
 
@@ -152,14 +169,15 @@ body {
     background-size: cover;
     background-position: center;
     /* background-repeat: no-repeat; */
-
 }
 
 .clients img {
     width: 150px;
 }
 
+
 /* End Clients */
+
 
 /*  Start Our Articles */
 
@@ -169,7 +187,9 @@ body {
     background-repeat: no-repeat;
 }
 
+
 /* End Our Articles */
+
 
 /* Start Article Details */
 
@@ -179,8 +199,8 @@ body {
 }
 
 
-
 /* End Article Details */
+
 
 /* Start Project Details */
 
@@ -190,12 +210,16 @@ body {
     font-size: 20px;
 }
 
+
 /* End Project Details */
 
+
 /* Start Project Tour */
+
 .project-tour {
     height: 120vh;
 }
+
 
 /* Start Smooth Carsoul */
 
@@ -252,9 +276,12 @@ body {
     transition: 1s;
 }
 
+
 /* End Smooth Carsoul */
 
+
 /* End Project Tour */
+
 
 /* Start Footer */
 
@@ -276,22 +303,19 @@ footer {
 
 /* End Footer */
 
+
 /* Start Media */
 
 @media (min-width: 768px) {
-
     .home .row {
         height: 85vh;
     }
-
     .about .row {
         height: 90vh;
     }
-
     .article-details .articles img {
         width: 60%;
     }
-
     .article-details .articles p {
         padding: 0 1rem;
         text-align: center !important;
@@ -299,24 +323,21 @@ footer {
 }
 
 @media (max-width: 768px) {
-
     .home {
         background-image: none;
     }
-
     .article-details .articles img {
         width: 100%;
     }
-
     .article-details .articles p {
         padding: 0 0.15rem;
         text-align: right !important;
     }
-
     footer .footer_right {
         display: flex;
         justify-content: center;
     }
 }
+
 
 /* End Media */

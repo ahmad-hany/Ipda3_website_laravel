@@ -14,7 +14,8 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        //
+        $photo = Photo::all()->toArray();
+        return view('project-details', compact('photo'));
     }
 
     /**

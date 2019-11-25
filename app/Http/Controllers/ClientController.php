@@ -15,7 +15,27 @@ class ClientController extends Controller
     public function index()
     {
         $client = Client::all()->toArray();
-        return view(['*'], compact('client'));
+        
+        if(Request::is('home')){
+
+            return view('home', compact('client'));
+
+        } else if(Request::is('article-details')){
+
+            return view('article-details', compact('client'));
+
+        } else if (Request::is('our-articles')){
+
+            return view('our-articles', compact('client'));
+
+        } else if(Request::is('our-work')){
+
+            return view('our-work', compact('client'));
+
+        } else if (Request::is('project-details')) {
+
+            return view('project-details', compact('client'));
+        }
     }
 
     /**

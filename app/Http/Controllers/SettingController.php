@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Setting;
-use Illuminate\Http\Request;
+use Request;
 
 class SettingController extends Controller
 {
@@ -15,7 +15,23 @@ class SettingController extends Controller
     public function index()
     {
         $setting = Setting::all()->toArray();
-        return view(['*'], compact('setting'));
+
+        if (Request::is('home')) {
+
+            return view('home', compact('setting'));
+        } else if (Request::is('article-details')) {
+
+            return view('article-details', compact('setting'));
+        } else if (Request::is('our-articles')) {
+
+            return view('our-articles', compact('setting'));
+        } else if (Request::is('our-work')) {
+
+            return view('our-work', compact('setting'));
+        } else if (Request::is('project-details')) {
+
+            return view('project-details', compact('setting'));
+        }
     }
 
     /**

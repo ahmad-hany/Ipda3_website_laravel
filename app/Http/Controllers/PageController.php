@@ -15,7 +15,23 @@ class PageController extends Controller
     public function index()
     {
         $page=Page::all()->toArray();
-        return view(['*'], compact('page'));
+
+        if (Request::is('home')) {
+
+            return view('home', compact('page'));
+        } else if (Request::is('article-details')) {
+
+            return view('article-details', compact('page'));
+        } else if (Request::is('our-articles')) {
+
+            return view('our-articles', compact('page'));
+        } else if (Request::is('our-work')) {
+
+            return view('our-work', compact('page'));
+        } else if (Request::is('project-details')) {
+
+            return view('project-details', compact('page'));
+        }
     }
 
     /**

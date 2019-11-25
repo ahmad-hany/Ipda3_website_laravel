@@ -17,26 +17,30 @@
                 <div class="container">
                     <div class="row pt-5 justify-content-around d-flex">
                         <div class="col-12 col-lg-5">
+                            @foreach ($post as $row)
+                                
                             <div class="card mb-5 shadow-lg">
-                                <img src="{{asset('frontend/assets/imgs/web.jpg')}}" class="card-img-top" alt="التدريب">
-                                <div class="card-body">
-                                    <p class="text-center">توقف دعم تطبيقات Microsoft شركة لتتبع اللياقة البدنية
-                                        Microsoft
-                                        Band</p>
+                            <img src="{{asset('frontend/assets/imgs/'. $row['image'] .'.jpg')}}" class="card-img-top" alt="التدريب">
+                            <div class="card-body">
+                                <p class="text-center"> 
+                                    {{$row['title']}}
+                                </p>
                                     <div class="justify-content-between d-flex">
                                         <button type="button"
-                                            class="btn btn-color text-center rounded-pill px-3 shadow">
-                                            <a href="article-details.html" class="text-decoration-none text-white">
-                                                اقرأ
-                                                الان
-                                            </a>
-                                        </button>
-                                        <span class="d-flex align-items-center">
-                                            200 &nbsp; <i class="fas fa-eye"></i>
-                                        </span>
-                                    </div>
+                                        class="btn btn-color text-center rounded-pill px-3 shadow">
+                                        <a href="article-details.html" class="text-decoration-none text-white">
+                                            اقرأ
+                                            الان
+                                        </a>
+                                    </button>
+                                    <span class="d-flex align-items-center">
+                                        200 &nbsp; <i class="fas fa-eye"></i>
+                                    </span>
                                 </div>
                             </div>
+                        </div>
+
+                            @endforeach
                         </div>
                     </div>
                     <div class="row d-flex justify-content-center">

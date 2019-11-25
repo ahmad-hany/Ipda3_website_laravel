@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/admin', function () {
-    return view('layouts.app');
+    return view('layouts.admin.app');
 });
 
 // Start Home Routes
@@ -43,16 +43,20 @@ Route::resource('home', 'SettingController');
 // });
 
 Route::resource('article-details', 'SettingController');
+Route::resource('our-articles', 'SettingController');
+Route::resource('our-work', 'SettingController');
+Route::resource('project-details', 'SettingController');
+Route::resource('article-details', 'SettingController');
 // End Article Details Routes
 
-Route::get('/our-articles', function () {
-    return view('our-articles');
-});
+// Route::get('/our-articles', function () {
+//     return view('our-articles');
+// });
 
-Route::get('/our-work', function () {
-    return view('our-work');
-});
+// Route::get('/our-work', function () {
+//     return view('our-work');
+// });
 
-Route::get('/project-details', function () {
-    return view('project-details');
-});
+// Route::get('/project-details', function () {
+//     return view('project-details');
+// });
